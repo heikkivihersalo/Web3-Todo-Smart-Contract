@@ -1,0 +1,230 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					}
+				],
+				"name": "addTodo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "counter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAmount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "getTodo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "content",
+								"type": "string"
+							},
+							{
+								"internalType": "bool",
+								"name": "status",
+								"type": "bool"
+							}
+						],
+						"internalType": "struct ToDoApp.ToDo",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "setAsDone",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					}
+				],
+				"name": "setAsUndone",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "todos",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "content",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "status",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"addTodo(string,string)": {
+					"notice": "Add new todo to todos -list. ID defaults to counter index and status defaults to false"
+				},
+				"constructor": {
+					"notice": "Constructor"
+				},
+				"getAmount()": {
+					"notice": "Get amount of todos"
+				},
+				"getTodo(uint256)": {
+					"notice": "Get todo. Give error code if id is not valid"
+				},
+				"setAsDone(uint256)": {
+					"notice": "Set todo as done. If no todos are found send error. Takes the ID of the todo (starting from 1)."
+				},
+				"setAsUndone(uint256)": {
+					"notice": "Set todo as undone. If no todos are found send error. Takes the ID of the todo (starting from 1)."
+				},
+				"todos(address,uint256)": {
+					"notice": "Mappings - \"todos\" -mapping is used to store content of the todo - \"counter -mapping list is used as an index of the todos -list"
+				}
+			},
+			"notice": "A simple ToDo smart contract app",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ToDoApp.sol": "ToDoApp"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ToDoApp.sol": {
+			"keccak256": "0x39d4268573da57554cb149f517f1c5a861469bba712a83a8494604f73b2fcf05",
+			"license": "Unlicensed",
+			"urls": [
+				"bzz-raw://a5a79354b056f9700c7424bd63689f3ecb02f63bcb13f1293f8b4653005bb912",
+				"dweb:/ipfs/QmUK2iRU3MyQZBa5N5LMx188WNDbQkW3HU2rA1X7dPi8mt"
+			]
+		}
+	},
+	"version": 1
+}
